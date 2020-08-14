@@ -16,7 +16,7 @@ const questions = [
   },
   {
     type: "input",
-    name: "github",
+    name: "github-username",
     message: "What is your github username?",
   },
   {
@@ -28,7 +28,7 @@ const questions = [
     type: "list",
     message: "What kind of license should your project have?",
     name: "license",
-    choices: ["MIT License", "Apache License 2.0", "GNU General Public License 3.0", "BSD 3", "None"],
+    choices: ["MIT License", "Apache License 2.0", "GNU General Public License 3.0", "BSD 3 License", "None"],
   },
   {
     type: "input",
@@ -60,6 +60,7 @@ function init() {
   inquirer.prompt(questions)
   .then(function (answers) {
       console.log("Name : "+answers.title);
+      generateMarkdown(answers);
 
   });
 }
