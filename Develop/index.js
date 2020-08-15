@@ -28,7 +28,13 @@ const questions = [
     type: "list",
     message: "What kind of license should your project have?",
     name: "license",
-    choices: ["MIT License", "Apache License 2.0", "GNU General Public License 3.0", "BSD 3 License", "None"],
+    choices: [
+      "MIT License",
+      "Apache License 2.0",
+      "GNU General Public License 3.0",
+      "BSD 3 License",
+      "None",
+    ],
   },
   {
     type: "input",
@@ -48,33 +54,36 @@ const questions = [
   {
     type: "input",
     name: "contributing",
-    message: "What does the user need to know about contributing to the project?",
-  }
+    message:
+      "What does the user need to know about contributing to the project?",
+  },
 ];
 
 // // function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+  
+  fs.writeFile(fileName, generateMarkdown(data), function (err) {
+    
+    console.log("Generating README...");
+
+    if (err) throw err;
+
+    console.log("README file Generated!");
+  });
+}
 
 // // function to initialize program
 function init() {
-  inquirer.prompt(questions)
-  .then(function (answers) {
-
-      fs.writeFile("README.md", generateMarkdown(answers), function(err) {
-
-        console.log("Generating README...");
-
-        if (err) 
-            throw err;
-
-        console.log("README file Generated!");
+  
+  inquirer
+    .prompt(questions)
+    .then(function (answers) {
+      writeToFile("README.md", answers);
+    })
+    .catch(function (err) {
+      console.log(err);
+    });
     
-      });
-
-  })
-  .catch(function(err) {
-    console.log(err);
-  });
 }
 
 init();
