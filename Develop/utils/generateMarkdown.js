@@ -10,46 +10,40 @@ function generateMarkdown(data) {
     
 
     return `# ${data.title}
+![Github License](https://img.shields.io/badge/license-MIT-green)
 
-    ![Github License](https://shields.io/badge/license-MIT-blue.svg)
+# Description
+${data.description}
 
-    # Description
-    ${data.description}
+# Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
 
-    # Table of Contents
+# Installation
+To install necessary dependencies, run the following command : 
+${data.installation}
 
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [License](#license)
-    * [Contributing](#contributing)
-    * [Tests](#tests)
-    * [Questions](#questions)
+# Usage
+${data.usage}
 
-    # Installation
+# License
+${licenseName}.
 
-    To install necessary dependencies, run the following command : 
-    ``
-    ${data.installation}
-    ``
-    # Usage
-    ${data.usage}
+# Contributing
+${data.contributing}
 
-    # License
-    ${licenseName}.
+# Tests
+To run tests, run the following command :
+${data.test}
 
-    # Contributing
-    ${data.contributing}
+# Questions
+If you have any queations about the repo, open an issue or contact me directly at ${data.email}. You can find more of my work at [${data.github}](https://github.com/${data.github}).
 
-    # Tests
-    To run tests, run the following command : 
-    ``
-    ${data.test}
-    ``
-    # Questions
-    If you have any queations about the repo, open an issue or contact me directly at ${data.email}. You can find more of my work at [${data.github-username}](https://github.com/${data.github-username}).
-
-  `;
+`;
   }
   
-  module.exports = generateMarkdown;
-  
+  module.exports = generateMarkdown; 

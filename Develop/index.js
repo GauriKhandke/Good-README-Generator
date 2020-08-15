@@ -16,7 +16,7 @@ const questions = [
   },
   {
     type: "input",
-    name: "github-username",
+    name: "github",
     message: "What is your github username?",
   },
   {
@@ -52,18 +52,29 @@ const questions = [
   }
 ];
 
-// function to write README file
+// // function to write README file
 function writeToFile(fileName, data) {}
 
-// function to initialize program
+// // function to initialize program
 function init() {
   inquirer.prompt(questions)
   .then(function (answers) {
-      console.log("Name : "+answers.title);
-      generateMarkdown(answers);
 
+      fs.writeFile("README.md", generateMarkdown(answers), function(err) {
+
+        console.log("Generating README...");
+
+        if (err) 
+            throw err;
+
+        console.log("README file Generated!");
+    
+      });
+
+  })
+  .catch(function(err) {
+    console.log(err);
   });
 }
 
-// function call to initialize program
 init();
