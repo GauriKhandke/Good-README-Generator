@@ -56,7 +56,7 @@ const questions = [
     name: "contributing",
     message:
       "What does the user need to know about contributing to the project?",
-  },
+  }
 ];
 
 // // function to write README file
