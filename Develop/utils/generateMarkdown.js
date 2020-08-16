@@ -4,10 +4,12 @@ function generateMarkdown(data) {
     let license = data.license;
     let licenseName = "";
     let badge = "";
+    
     if(license === "None")
       licenseName = "This project has no license";
     else{
       licenseName = "This project is licensed under the "+license;
+      
       switch(license){
         case "MIT License" : 
     
