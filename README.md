@@ -12,8 +12,12 @@ Goal is to create a command-line application that dynamically generates a profes
 * This will allow a project creator to spend more time working on finishing the project and less time creating a good README.
 
 # Demo
-
+![Readme Generator](images/ReadmeGenerator.gif)
 # Screenshots
+
+|Terminal|Generated README.md file
+|--|--
+|![Terminal](images/readme-terminal.png)|![Preview](images/preview.png)
 
 ## User Story
 
