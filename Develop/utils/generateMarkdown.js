@@ -67,7 +67,9 @@ To run tests, run the following command :
 <pre><code>${data.test}</code></pre>
 
 # Questions
-* If you have any questions about the repo, [open an issue](https://github.com/${data.github}/${data.title}/issues/new) or contact me directly at ${data.email}. 
+* If you have any questions about the repo, 
+[open an issue](https://github.com/${data.github}/${data.title}/issues/new) 
+or contact me directly at ${data.email}. 
 * You can find more of my work at [${data.github}](https://github.com/${data.github}).
 
 `;

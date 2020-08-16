@@ -49,24 +49,24 @@ const questions = [
   {
     type: "input",
     name: "usage",
-    message: "What are the usage guidelines?",
+    message: "What is the usage information?",
   },
   {
     type: "input",
     name: "contributing",
     message:
-      "What does the user need to know about contributing to the project?",
+      "What are the contribution guidelines?",
   }
 ];
 
 // // function to write README file
 function writeToFile(fileName, data) {
   
-  fs.writeFile(fileName, generateMarkdown(data), function (err) {
+  fs.writeFile(fileName, generateMarkdown(data), error => {
     
     console.log("Generating README...");
 
-    if (err) throw err;
+    if (error) throw error;
 
     console.log("README file Generated!");
   });
