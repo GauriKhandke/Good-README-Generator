@@ -1,9 +1,9 @@
 # Good-README-Generator
-UW Coding Bootcamp HW 09: Node.js and ES6+ : Good README Generator
+![MIT License](https://img.shields.io/badge/license-MIT-green)
 
-# Goal
+# Description
 
-Goal is to create a command-line application that dynamically generates a professional README.md from a user's input using the [Inquirer package](https://www.npmjs.com/package/inquirer).
+Good REAME Generator is a command-line application that dynamically generates a professional README.md from a user's input using the [Inquirer package](https://www.npmjs.com/package/inquirer).
 
 # Motivation
 
@@ -13,6 +13,7 @@ Goal is to create a command-line application that dynamically generates a profes
 
 # Demo
 ![Readme Generator](images/ReadmeGenerator.gif)
+
 # Screenshots
 
 |Terminal|Generated README.md file
